@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Vaalikonevastaukset puolueittain</title>
+        <meta name="description" content="Taulukko Helsingin Sanomien vaalikoneen vastauksista puolueittain.">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <div id="container">
+		    <select id="selector" onchange="updateGraph()">
+		    	<!--populated by javascript-->
+		    </select>
+        </div>
+
+        <div id ="buttonContainer">
+            <button id="backButton" onclick="previousQ()">Edellinen kysymys</button>
+            <button id="fwdButton" onclick="nextQ()">Seuraava kysymys</button>
+            <input type="checkbox" id="scale" value="scale" onchange="updateGraph()" checked> <b>Huomioi EOS</b></input>    
+        </div>
+
+        <div id = "questionTextContainer">
+            <span id = "questionText"></span>
+        </div>
+
+        <div id="container">
+            <canvas id="canvas" style="border:0px solid #000000;"></canvas>
+        </div>
+
+        <div >
+        <h4>Näytä puolue</h4>      		
+        	<p id = "partyCheckboxes">        	
+        	<!--populated by javascript-->
+        	</p>	        	
+        </div>
+
+        <br>
+
+        <div id = footerAndCredits>
+		    <p>Graafi näyttää vastausten keskiarvon (piste) ja keskihajonnan (viiva) puolueittain. Vaalikone.fi:n vastaukset käyttävät viisiportaista asteikkoa (1-5), jossa "Täysin eri mieltä" on 1 ja "Täysin samaa mieltä" on 5. "En osaa sanoa" on koodattu arvoksi 3. Jos haluat jättää huomioimatta EOS vastaukset, poista ruksi kohdasta "Huomioi EOS". Tällöin käytössä on neliportainen asteikko (1-4), jossa "Täysin eri mieltä" on 1 ja "Täysin samaa mieltä" on 4.</p>
+
+		    <p><i>Aineistona on käytetty Sanoma Oy:n vaalikonetta (http://www.vaalikone.fi)ja Creative Commons lisenssillä (CC BY 1.0 FI) julkaistua avointa vaalikonedataa ehdokkaiden vastauksista. Data löytyy osoitteesta http://dynamic.hs.fi/tiedostot/23337017HS-eurovaalikone-14-05-1.csv</i></p>
+
+		    <p><i>Tekijä: Seppo Toikka (twitter:@seppotoikka)</i></p>
+        </div>
+
+        <script type="text/javascript" src="data.js"></script>
+        <script type="text/javascript" src="graph.js"></script>  
+        <script>                  
+            //add resize listener and draw graph when page is loaded
+            initialize();
+        </script>
+    </body>
+    </html>

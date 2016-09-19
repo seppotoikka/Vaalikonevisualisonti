@@ -1,0 +1,58 @@
+html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                border: 0;
+                display: block; 
+                overflow-x: hidden;
+                overflow-y: auto;
+                min-width: 480px;
+}
+h4{
+    margin-top: 5px;
+    margin-left: 40px;               
+    max-width: 70%;
+}
+p {
+    margin-top: 5px;
+    margin-left: 40px;               
+    max-width: 70%;
+}
+input {
+    transform: scale(1.5);
+}
+button{
+    margin-right: 10px;
+}
+span.nowrap {
+    white-space: nowrap;
+    padding-right: 20px;
+}
+p#partyCheckboxes {
+    margin-left: 40px;               
+    max-width: 65%;
+    border-style: solid;
+    border-width: thin;
+    background-color: #EEEEEE;
+    font-size: 150%;
+}
+#container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#selector {
+    margin-top: 5px;
+    margin-left:40px;
+}
+#buttonContainer {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#questionTextContainer {
+    width: 70%;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
